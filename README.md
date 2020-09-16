@@ -154,7 +154,7 @@ just like this
                 </table>
 ```
 here use `map` function for using loop and `keys` using for unic identify the objects
-
+## 2. Update the value
 
 - Create a new State variable to hand data 
 ```javascript
