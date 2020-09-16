@@ -122,7 +122,7 @@ useEffect(()=>{
 ```
 just like this 
 - iv. Create a table to show the values 
-```
+```javascript
 <table className="table table-borderless table-stripped">
                     <thead className="table-light">
                         <tr>
