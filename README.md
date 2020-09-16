@@ -13,16 +13,16 @@ npm start
 ## 2. Go to Firebase console and create a Project and give him a name (ex- student-management)
   - select Add Firebase to your app from realtime database
   - Give the app name then register that name and click Register the app
-  - In the next page copy the [<script> code </script>] code under the script 
+  - In the next page copy the `[<script> code </script>]` code under the script 
   - paste that code inside the react .js src folder which name is firebase.js
-  - install in cmd > npm i -s firebase
+  - install in cmd > `npm i -s firebase`
   - import the package into firebase.js 
-  >import * as firebase from "firebase";
+  `import * as firebase from "firebase";`
   
 ## 3. Create a folder name -components and also two file name: Contactform.js and Contacts.js
 - use the bootstrap javascript codes and css code and paste on Public> index.html
 - to use the Contactform.js file in to Contact.js file use **import ContactForm from "./Contactform";*
-- Build your UX design like input form , radio button ,dropdown button just like normal bootstrap code 
+- Build your UX design like `input, form , radio button ,dropdown button` just like normal bootstrap code 
 
 **Initial the values into Const ContactForm*
 ```javascript
