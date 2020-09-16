@@ -12,4 +12,8 @@ npm start
 
 ## 2. Go to Firebase console and create a Project and give him a name (ex- student-management)
   - select Add Firebase to your app from realtime database
-  -
+  - Give the app name then register that name and click Register the app
+  - In the next page copy the [<script> code </script>] code under the script 
+  - paste that code inside the react .js src folder which name is firebase.js
+  
+ ##
