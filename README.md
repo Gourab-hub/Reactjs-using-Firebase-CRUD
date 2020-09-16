@@ -191,4 +191,4 @@ useEffect(()=>{
     },[props.currentId,props.contactObjects])
 
 ```
-here if currentId is empty that mene there is no is was selected and if there is a value on current id there is else part and the set the values.
+here `if` currentId is empty that mene there is no is was selected and if there is a value on current id there is else part and the `setValues` the values.
