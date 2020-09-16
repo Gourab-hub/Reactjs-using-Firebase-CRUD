@@ -59,7 +59,15 @@ const handleInputChange = e =>{
 ```
 
 
+- also create `onSubmit` event to submit your data on your form `onSubmit={handleFormSubmit}`
+- define that function 
+```javascript
 
+  const handleFormSubmit= e=>{
+        e.preventDefault();
+        props.addOrEdit(values)
+    }
+```
 
 
   
