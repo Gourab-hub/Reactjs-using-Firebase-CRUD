@@ -91,7 +91,7 @@ const handleInputChange = e =>{
 
 - import that firebaseDb from firebase in Contact.js page
 
-```
+```javascript
 import firebaseDB from "../firebase";
 ```
 
@@ -102,13 +102,13 @@ import firebaseDB from "../firebase";
 ## 1. there is two step in this step 1st fetch the value from firebase and update it 
 - i. for fetch the value at firse you import `{useState,useEffect}` 
 - ii. define a state property 
-```
+```javascript
 var[contactObjects,setContactObjects]=useState({})
 ```
 
 -iii. and a callback function 
 
-```
+```javascript
 useEffect(()=>{
     firebaseDB.child('contacts').on('value',snaoshot=>{
         if(snaoshot.val()!=null)
@@ -157,15 +157,20 @@ here use `map` function for using loop and `keys` using for unic identify the ob
 
 
 - Create a new State variable to hand data 
-```
+```javascript
 var [currentId,setCurrentId] = useState('')
 ```
 - Create a edit button on table 
 ```javascript
    <td>
-                                        <a className="btn btn-prymary" onClick={() => {setCurrentId(id)}} >
-                                            <i className="fas fa-pencil-alt"></i>
-                                        </a>
+       <a className="btn btn-prymary" onClick={() => {setCurrentId(id)}} >
+          <i className="fas fa-pencil-alt"></i>
+         </a>
                                         
-                                    </td>
+       </td>
+```
+onclick button on pencil button use for pass the value with `setCurrentId(id)` parameter id
+- in the same time we need to retrive the data on and put it on the from 
+```javascript
+<ContactForm {...({addOrEdit,currentId,contactObjects})}  />
 ```
