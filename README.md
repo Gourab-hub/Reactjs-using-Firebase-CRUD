@@ -174,3 +174,21 @@ onclick button on pencil button use for pass the value with `setCurrentId(id)` p
 ```javascript
 <ContactForm {...({addOrEdit,currentId,contactObjects})}  />
 ```
+- Using Props function on Contactform.js access to all child property and put on parents components we use `useEffect`
+
+```javascript
+
+useEffect(()=>{
+        if(props.currentId == '')
+            setValues({
+                ...initialFieldValues
+            })
+        else
+        setValues({
+            ...props.contactObjects[props.currentId]
+        })
+
+    },[props.currentId,props.contactObjects])
+
+```
+here if currentId is empty that mene there is no is was selected and if there is a value on current id there is else part and the set the values.
