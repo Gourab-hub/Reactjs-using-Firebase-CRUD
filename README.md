@@ -15,5 +15,8 @@ npm start
   - Give the app name then register that name and click Register the app
   - In the next page copy the [<script> code </script>] code under the script 
   - paste that code inside the react .js src folder which name is firebase.js
+  - install in cmd > npm i -s firebase
+  - import the package into firebase.js >import * as firebase from "firebase";
   
- ##
+##
+  -
