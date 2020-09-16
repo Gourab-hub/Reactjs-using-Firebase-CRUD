@@ -99,4 +99,73 @@ import firebaseDB from "../firebase";
 
 # Update the data 
 
-## 
+## 1. there is two step in this step 1st fetch the value from firebase and update it 
+- i. for fetch the value at firse you import `{useState,useEffect}` 
+- ii. define a state property 
+```
+var[contactObjects,setContactObjects]=useState({})
+```
+
+-iii. and a callback function 
+
+```
+useEffect(()=>{
+    firebaseDB.child('contacts').on('value',snaoshot=>{
+        if(snaoshot.val()!=null)
+        setContactObjects({
+            ...snaoshot.val()
+        })
+    })
+
+},[])
+
+```
+just like this 
+- iv. Create a table to show the values 
+```
+<table className="table table-borderless table-stripped">
+                    <thead className="table-light">
+                        <tr>
+                            <th>Full Name </th>
+                            <th>Mobile </th>
+                            <th>Email </th>
+                            <th>Details </th>
+                            <th>Skills </th>
+                            <th>Gender </th>
+                            <th>Action </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            Object.keys(contactObjects).map(id=>{
+                                return<tr key={id}>
+                                    <td >{contactObjects[id].fullName}</td>
+                                    <td >{contactObjects[id].mobile}</td>
+                                    <td >{contactObjects[id].email}</td>
+                                    <td >{contactObjects[id].details}</td>                                   
+                                    <td >{contactObjects[id].skills}</td>
+                                    <td >{contactObjects[id].gender}</td>
+                               
+                                 
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </table>
+```
+here use `map` function for using loop and `keys` using for unic identify the objects
+
+
+- Create a new State variable to hand data 
+```
+var [currentId,setCurrentId] = useState('')
+```
+- Create a edit button on table 
+```
+   <td>
+                                        <a className="btn btn-prymary" onClick={() => {setCurrentId(id)}} >
+                                            <i className="fas fa-pencil-alt"></i>
+                                        </a>
+                                        
+                                    </td>
+```
