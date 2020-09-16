@@ -97,7 +97,7 @@ import firebaseDB from "../firebase";
 
 - now your add data is done
 
-# Update the data 
+# 4. Update the data 
 
 ## 1. there is two step in this step 1st fetch the value from firebase and update it 
 - i. for fetch the value at firse you import `{useState,useEffect}` 
