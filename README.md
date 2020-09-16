@@ -156,11 +156,11 @@ just like this
 here use `map` function for using loop and `keys` using for unic identify the objects
 ## 2. Update the value
 
-- Create a new State variable to hand data 
+- i. Create a new State variable to hand data 
 ```javascript
 var [currentId,setCurrentId] = useState('')
 ```
-- Create a edit button on table 
+- ii. Create a edit button on table 
 ```javascript
    <td>
        <a className="btn btn-prymary" onClick={() => {setCurrentId(id)}} >
@@ -170,11 +170,11 @@ var [currentId,setCurrentId] = useState('')
        </td>
 ```
 onclick button on pencil button use for pass the value with `setCurrentId(id)` parameter id
-- in the same time we need to retrive the data on and put it on the from 
+- iii. in the same time we need to retrive the data on and put it on the from 
 ```javascript
 <ContactForm {...({addOrEdit,currentId,contactObjects})}  />
 ```
-- Using Props function on Contactform.js access to all child property and put on parents components we use `useEffect`
+- iv. Using Props function on Contactform.js access to all child property and put on parents components we use `useEffect`
 
 ```javascript
 
