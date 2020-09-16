@@ -161,7 +161,7 @@ here use `map` function for using loop and `keys` using for unic identify the ob
 var [currentId,setCurrentId] = useState('')
 ```
 - Create a edit button on table 
-```
+```javascript
    <td>
                                         <a className="btn btn-prymary" onClick={() => {setCurrentId(id)}} >
                                             <i className="fas fa-pencil-alt"></i>
