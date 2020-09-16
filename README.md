@@ -69,5 +69,34 @@ const handleInputChange = e =>{
     }
 ```
 
+- all the firebase related work on addOrEdit function which is in Contacts.js
+```javascripts
+ const addOrEdit=obj =>{
+        firebaseDB.child('contacts').push(
+            obj,
+            err=>{
+                if(err)
+                console.log(err)            
+            }
+        )
+    }
+```
+- create a var variable on firebase.js who store the all script file and export it 
 
-  
+```javascript
+ var fireDB=firebase.initializeApp(firebaseConfig);
+
+ export default fireDB.database().ref();
+```
+
+- import that firebaseDb from firebase in Contact.js page
+
+```
+import firebaseDB from "../firebase";
+```
+
+- now your add data is done
+
+# Update the data 
+
+## 
